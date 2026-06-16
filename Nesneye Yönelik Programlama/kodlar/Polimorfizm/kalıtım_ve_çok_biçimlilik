@@ -1,0 +1,134 @@
+package nyp_30_04;
+
+class A{	A(){System.out.println("A konstrüktöür");}	}
+class B extends A{	B(){System.out.println("B konstrüktöür");}	}
+class C extends B{	C(){System.out.println("C konstrüktöür");}	}
+class D extends C{	D(){System.out.println("D konstrüktöür");}	}
+//Constructor chaining
+
+
+class Hayvan extends Object{//SuperClass(Ata Sınıf)
+	//extends Object yazsan da yapar, yazmasan da yapar.
+	private int yas;
+	private String renk;
+	private double kutle;
+	
+	void setYas(int yas) {
+		this.yas=yas;
+	}
+	void setRenk(int yas) {
+		this.renk=renk;
+	}
+	void setKutle(int yas) {
+		this.kutle=kutle;
+	}
+	
+	Hayvan(){
+		System.out.println("Parametresiz hayvan konstürüktörü");
+		yas=0;
+		renk="Beyaz";
+		kutle=1.0;
+	}
+	Hayvan(int yas, String renk, double kutle){
+		System.out.println("Parametreli hayvan konstürüktörü");
+		this.yas=yas;
+		this.renk=renk;
+		this.kutle=kutle;
+	}
+	
+	void uyu() {
+		System.out.println("Hayvan uyuyor.");
+	}
+	
+	private void sesVer() {
+		System.out.println("Hayvan ses veriyor.");
+	}
+	static void sinifAdi() {
+		System.out.println("HAYVAN SINIFI");
+	}
+	
+	
+	
+	
+	
+}
+
+class Kedi extends Hayvan{//extends(genişletmek,uzatmak)//SubClass
+	int ayakSayisi;
+	boolean kuyruk;
+	
+	
+
+	static void sinifAdi() {//METHOD HIDING
+		System.out.println("KEDİ SINIFI");
+	}
+	
+	Kedi(){
+		//private değişkenler miraz kalır ama doğrudan erişilemez
+		//yas=2;
+		//kutle=2;
+		//renk="Kahverengi";//bunları ayarlamak için ata sınıfta bir konstrüktör de var!!
+		
+		
+		
+		//super(2,"Kahverengi",2.0);
+		//super();//gizliden bunu yaptı, yani ata sınıfın parametresiz konstrüktörünü çağırdı.
+		ayakSayisi=4;
+		kuyruk=true;
+	}
+	void yemekYe() {
+		System.out.println("Kedi eti yedi.");
+	}
+	void yemekYe(String x) {
+		System.out.println("Kedi "+x+" yedi.");
+	}
+	void tirmala() {
+		System.out.println("Kedi tırmaladı.");
+	}
+	@Override//overriding yaptığın metotu kontrol etmek için kendimizin koyduğu bir uyarı
+	void uyu() {//METHOD OVERRIDING
+		System.out.println("Purrrrrrrrrrr");
+	}
+	//YUKARIDAKİLER İLE AYNI İMZAYA SAHİP
+	
+	//private metotlar ezilemez!!!!
+	private void sesVer() {//METHOD OVERRIDING
+		System.out.println("Miyav!");
+	}
+	void uyu(int saat) {//METHOD OVERRIDING
+		System.out.println("Kedi "+saat+" uyudu.");
+	}
+}
+
+
+public class Mian {
+
+	public static void main(String[] args) {
+		
+		//new D();
+		
+	//Hayvan tekir=new Kedi();//polimorfik yazım
+	//Deklare edilen sınıf Hayvan
+	//Gerçek sınıf Kedi
+		
+		Kedi a=new Kedi();
+		Hayvan b=new Kedi();
+		
+		a.kuyruk=false;
+		//b.kuyruk=false;
+		
+		
+		
+		//Kedi tekir=new Kedi();
+		//System.out.println("Kedinin yaşı: "+tekir.yas);
+		//tekir.tirmala();
+		//tekir.yemekYe();
+		//tekir.uyu();
+		//tekir.sesVer();
+		//tekir.yemekYe("et");
+		//tekir.uyu(9);
+		Kedi.sinifAdi();
+		//tekir.sinifAdi();
+	}
+
+}
