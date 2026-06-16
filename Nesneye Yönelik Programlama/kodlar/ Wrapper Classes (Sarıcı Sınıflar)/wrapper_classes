@@ -1,0 +1,123 @@
+package nyp_16_04;
+
+class Course{
+	private String courseName;
+	private String[] students = new String[5];
+	private int numberOfStudents;
+	
+	public Course(String sourseName) {
+		this.courseName = courseName;
+	}
+	
+	public void addStudent(String student) {
+		if(students.length==numberOfStudents) {
+			//eğer öğrenci listesi ağzına kadar doluysa 
+			String[] students2 = new String[2*numberOfStudents];
+			System.arraycopy(students, 0, students2, 0, numberOfStudents);
+			students=students2;
+		}
+		students[numberOfStudents]=student;
+		numberOfStudents++;
+	}
+	public int getStudents() {
+		return numberOfStudents;
+	}
+	
+	public String getCourseName() {
+		return courseName;
+	}
+	public void dropStudent(String student) {
+		boolean bulundu=false;
+		int i;
+		
+		for(i=0;i<numberOfStudents;i++) {
+			if(student.equals(students[i]) {
+				bulundu=true;
+				break;
+				
+			}
+		}
+		if(!bulundu) {
+			System.out.println("Silmek istediğiniz öğrenci listede yok!");
+		}
+		else {
+			//i.pozisyonda öğrenciyi bul
+			System.arraycopy(students, i+1, students2,i , numberOfStudents-i-1);
+			students[numberOfStudents-1]=null;
+			numberOfStudents--;
+			System.out.println(student+"isimli öğrenciyi sildik");
+		}
+	}
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		Integer i=Integer.parseInt("23",8);
+		//AUTO-BOXİNG(OTOMATİK KUTULAMA)
+		
+		//gizliden bir nesneye çeviriyor buna auto boxing deniyor
+		//nesne referansı = primitif tip
+		
+		
+		Double f=4.5;//wrapper class'tan bir nesne
+		//AUTO-BOXİNG(OTOMATİK KUTULAMA)
+		//sağdaki primitif değer otomatikman bir
+		//nesneye dönüştürülür ve f referansına bağlanır
+		
+		
+		
+		
+		Double f2=new Double(4.5);
+		//üzerinin çizili olmasının nedeni buna ihtiyaç kalmamasıdır
+		
+		
+		double f3=f+f2;
+		
+		
+		
+		//primitif=nesne+nesne normalde çalışmaz!
+		//olan şey: nesnelerin her biri AUTO-BOXİNG mekanizması ile 
+		//birer primitif değere dönüştürüldü ve toplama 
+		//primitif=primitif+primitif şeklinde yapıldı
+		
+		
+		//Integer d = 5.4; DERLEME HATASI
+		
+		
+		Double x = 3.0;//sadece 3 yazarsan arıza çıkarır
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		System.out.println(i);
+				
+				
+				
+				
+		Course benim_kurs=new Course("NYP");
+		benim_kurs.addStudent("Ali");
+		benim_kurs.addStudent("veli");
+		benim_kurs.addStudent("Ayşe");
+		benim_kurs.addStudent("Fatma");
+		benim_kurs.addStudent("Nuray");
+		benim_kurs.addStudent("Ahmet");
+		benim_kurs.addStudent("veli");
+		
+		benim_kurs.dropStudent("Veli");
+		
+		String[] donenler2=benim_kurs.getStudents();
+		for(int i=0;benim_kurs.getNumberOfStudents();i++) {//4. yerine null alır çünkü dizi yeniden tanımlandı
+			System.out.println(donenler2[i]);
+		}
+
+	}
+
+}
