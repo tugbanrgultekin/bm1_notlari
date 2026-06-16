@@ -1,4 +1,4 @@
-package nyp_04_07;
+package nyp_04_06;
 
 import java.awt.*;
 import java.awt.event.*;
