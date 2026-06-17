@@ -1,26 +1,15 @@
 <p> Senaryomuz: "Sinema Bilet Sistemi" 🍿🎬
 Bir sinema salonu için bilet satış programı yazıyorsun. Sistemin kuralları ve özellikleri şunlar olacak:
-
 Yaş Sınırı Kuralı (Bizim Kuralımız - throw):
-
 Sinemada gösterilen film +18 yaş sınırına sahip.
-
 Kullanıcıdan yaşını alacaksın. Eğer kullanıcının yaşı 18'den küçükse, Java'nın hazır hata sınıflarından biri olan IllegalArgumentException fırlatacaksın (throw) ve mesaj olarak "HATA: Bu filme 18 yaşından küçükler giremez!" yazdıracaksın.
-
 Dış Kaynak Riski (Sistem Riski - throws):
-
 biletYazdir adında bir metot (method) oluşturmanı istiyorum.
-
 Bu metot, bilet bilgilerini (film adı, yaş vb.) güya bir yazıcıya veya dosyaya gönderecek. Dosya/Yazıcı işlemleri riskli olduğu için bu metodun imza satırına throws IOException ekleyerek sorumluluğu main metoduna paslayacaksın.
-
 Kullanıcı Döngüsü (Scanner ve try-catch):
-
 main metodunun içinde kullanıcıdan Scanner ile yaşını isteyeceksiniz.
-
 Bu işlemi bir try-catch-finally bloğu içine alacaksın.
-
 catch bloklarında: Hem yaş hatasını (IllegalArgumentException) hem de olası bir sistem/yazıcı hatasını (IOException) ayrı ayrı yakalayıp ekrana kibar uyarılar yazdıracaksın.
-
 finally bloğunda: Sinema sisteminin her halükarda ekrana "--- İyi Seyirler Dileriz (Sistem Kapatıldı) ---" yazmasını sağlayacaksın.</p>
 
 
