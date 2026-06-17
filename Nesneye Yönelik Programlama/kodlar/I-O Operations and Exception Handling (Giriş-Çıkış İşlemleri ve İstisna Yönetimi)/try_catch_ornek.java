@@ -13,7 +13,6 @@ catch bloklarında: Hem yaş hatasını (IllegalArgumentException) hem de olası
 finally bloğunda: Sinema sisteminin her halükarda ekrana "--- İyi Seyirler Dileriz (Sistem Kapatıldı) ---" yazmasını sağlayacaksın.
 
 
-```java
 package zfinal;
 
 import java.io.IOException;
@@ -81,7 +80,7 @@ public class Main {
     	    	
      }
 }	        	
-             
+
             
             
 
