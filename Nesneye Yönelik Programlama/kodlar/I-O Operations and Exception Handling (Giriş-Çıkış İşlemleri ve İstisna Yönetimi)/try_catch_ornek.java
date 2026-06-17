@@ -21,7 +21,7 @@ Bu işlemi bir try-catch-finally bloğu içine alacaksın.
 
 catch bloklarında: Hem yaş hatasını (IllegalArgumentException) hem de olası bir sistem/yazıcı hatasını (IOException) ayrı ayrı yakalayıp ekrana kibar uyarılar yazdıracaksın.
 
-finally bloğunda: Sinema sisteminin her halükarda ekrana "--- İyi Seyirler Dileriz (Sistem Kapatıldı) ---" yazmasını sağlayacaksın.<p>
+finally bloğunda: Sinema sisteminin her halükarda ekrana "--- İyi Seyirler Dileriz (Sistem Kapatıldı) ---" yazmasını sağlayacaksın.</p>
 
 
 
